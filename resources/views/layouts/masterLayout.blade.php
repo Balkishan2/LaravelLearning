@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CoralBlue UI</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href={{ asset('css/style.css') }} />
 </head>
 <body>
   <div class="layout">
     <!-- Sidebar -->
     <aside class="sidebar">
       <h2 class="logo">CoralBlue</h2>
+      @section('sidebar')
       <nav>
         <ul>
           <li><a href="#" class="active">🏠 Dashboard</a></li>
@@ -19,6 +20,7 @@
           <li><a href="#">⚙️ Settings</a></li>
         </ul>
       </nav>
+      @show
     </aside>
 
     <!-- Main Content -->
@@ -44,5 +46,6 @@
       </footer>
     </div>
   </div>
+  @stack('scripts')
 </body>
 </html>
